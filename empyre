@@ -1178,8 +1178,8 @@ if __name__ == '__main__':
     parser.add_argument('--rest', action='store_true', help='Run the EmPyre RESTful API.')
     parser.add_argument('--restport', nargs='?', help='Port to run the EmPyre RESTful API on.')
     parser.add_argument('--headless', action='store_true', help='Run EmPyre and the RESTful API headless without the usual interface.')
-    parser.add_argument('--username', nargs='?', help='Start the RESTful API with the specified username instead of pulling from emypre.db')
-    parser.add_argument('--password', nargs='?', help='Start the RESTful API with the specified password instead of pulling from emypre.db')
+    parser.add_argument('--username', nargs='?', help='Start the RESTful API with the specified username instead of pulling from empyre.db')
+    parser.add_argument('--password', nargs='?', help='Start the RESTful API with the specified password instead of pulling from empyre.db')
 
     args = parser.parse_args()
 
@@ -1187,7 +1187,7 @@ if __name__ == '__main__':
         args.restport = '1337'
 
     if args.version:
-        print emypre.VERSION
+        print empyre.VERSION
 
     elif args.rest:
         # start just the RESTful API
